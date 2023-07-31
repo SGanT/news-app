@@ -1,0 +1,64 @@
+<div class="popup">
+    <!--Можно провести декомпозицию и сделать отдельные компонеты с модальным окном, формой и результатом-->
+    <div class="popup-content" *ngIf="!addedItem">
+        <div class="popup-header">
+            <h3>Добавить новость</h3>
+            <button class="close-popup-btn" (click)="hidePopup()">
+                <img class="mobile" src="../../../../../assets/img/cross.svg" alt="">
+                <img class="desktop" src="../../../../../assets/img/white_cross.svg" alt="">
+            </button>
+        </div>
+        <form class="popup-form" [formGroup]="formGroup" (ngSubmit)="submitForm()">
+            <div class="input-row">
+                <input class="text_4" formControlName="title" type="text" placeholder="Заголовок" />
+            </div>
+            <div class="input-row">
+                <textarea class="text_4" formControlName="text" placeholder="Текст"></textarea>
+            </div>
+            <div class="input-row">
+                <button class="btn upload-img-btn text_4" (click)="uploadImage($event)">Загрузить изображение</button>
+            </div> 
+            <div class="input-row selected-images-container" *ngIf="SelectedImagesSrc.length">
+                <div *ngFor="let src of SelectedImagesSrc" class="selected-image-wrap">
+                    <button class="remove-img-btn" (click)="removeImage(src)">
+                        <img src="../../../../../assets/img/white_cross.svg" alt="">
+                    </button>
+                    <img class="selected-image" [src]="src" alt="">
+                </div>
+            </div>
+            <div class="input-row">
+                <button class="btn submit-btn text_4" 
+                    type="submit" 
+                    [disabled]="formGroup.invalid">
+                    Опубликовать новость
+                </button>
+            </div>
+            <input #fileInput
+                type="file"
+                [multiple]="false"
+                class="hidden"
+                (change)="filesSelected($event)"
+                accept=".png,.jpg">
+        </form>
+    </div>
+
+    <div class="popup-content" *ngIf="addedItem">
+        <div class="popup-header">
+            <h3>Готово</h3>
+            <button class="close-popup-btn" (click)="hidePopup()">
+                <img class="mobile" src="../../../../../assets/img/cross.svg" alt="">
+                <img class="desktop" src="../../../../../assets/img/white_cross.svg" alt="">
+            </button>
+        </div>
+        <div class="popup-flex">
+            <img class="preview-image" *ngIf="addedItem.titleImageUrl.length > 0" [src]="addedItem.titleImageUrl" alt="">
+            <p class="text_2">{{ addedItem.text }}</p>
+        </div>
+        <div class="input-row">
+            <button class="btn submit-btn text_4" (click)="hidePopup()">
+                Окей
+            </button>
+        </div>
+    </div>
+</div>
+<div class="popup-background" (click)="hidePopup()"></div>

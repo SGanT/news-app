@@ -1,0 +1,5 @@
+<app-add-news-popup *ngIf="isPopupShown"></app-add-news-popup>
+<app-news-list [newsList]="newsList" [localNewsList]="localNewsList" (loadPage)="loadNextPage()"></app-news-list>
+<button class="add-button" (click)="showPopup()">
+    <img src="../../../assets/img/plus.svg" alt="" class="plus">
+</button>

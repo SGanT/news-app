@@ -1,0 +1,15 @@
+<div class="news-card" *ngIf="!mockMode">
+    <img *ngIf="card?.titleImageUrl" class="news-card-img" [src]="card?.titleImageUrl" alt="">
+    <span class="news-card-chip text_4">{{ card?.publishedDate | date:'dd.MM.yy':'ru-RU' }}</span>
+    <p class="news-card-title text_2" (click)="navigate(card)">{{ card?.title }}</p>
+</div>
+
+<div class="news-card" *ngIf="mockMode">
+    <div class="img-placeholder"></div>
+    <span class="date-paceholder">0</span>
+    <p class="text-placeholder">
+        <span></span>
+        <span></span>
+        <span></span>
+    </p>
+</div>

@@ -1,0 +1,7 @@
+<div class="page-wrapper">
+    <div *ngIf="page" class="page">
+        <h2>{{page.title}}</h2>
+        <span class="date-chip text_4">{{ page.publishedDate | date:'dd.MM.yy':'ru-RU' }}</span>
+        <div [innerHtml]="page.text" class="text_3"></div>
+    </div>
+</div>

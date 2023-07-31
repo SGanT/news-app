@@ -1,0 +1,48 @@
+@import '../../../assets/styles/variables';
+
+.header-wrapper {
+    border-width: 0 0 1px 0;
+    border: 1px solid $black10;
+    position: fixed;
+    background: $bg;
+    width: 100%;
+    z-index: 900;
+    top: 0;
+}
+
+.header {
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+    margin-right: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1920px) {
+    .header-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header {
+        width: 80%;;
+    }
+}

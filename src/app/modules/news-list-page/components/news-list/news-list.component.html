@@ -1,0 +1,9 @@
+<div class="news-list-wrapper">
+    <div class="news-list">
+        <app-news-card [newsItem]="item" *ngFor="let item of localNewsList"></app-news-card>
+        <app-news-card [newsItem]="item" *ngFor="let item of newsList"></app-news-card>
+    </div>
+</div>
+<div class="loader text_4" #listContainer>
+    *some fancy loader stuff*
+</div>

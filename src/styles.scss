@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/_variables.scss';
+@import './assets/styles/reset.css';
+
+/* Util classes */
+@media screen and (min-width: 1024px) {
+    .mobile {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .desktop {
+        display: none !important;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+// Global app styles
+
+body {
+    background-color: $bg;
+}
+
+h1 {
+    font-family: 'Inter';
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black100;   
+}
+
+h2 {
+    font-family: 'Inter';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black100;
+}
+
+h3 {
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black100;
+}
+
+.text_1 {
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black100;
+}
+
+.text_2 {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black100;
+
+}
+
+.text_3 {
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black100;
+}
+
+.text_4 {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black100;
+}

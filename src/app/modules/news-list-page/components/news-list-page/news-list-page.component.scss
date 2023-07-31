@@ -1,0 +1,41 @@
+@import '../../../../../assets/styles/variables';
+
+.add-button {
+    width: 60px;
+    height: 60px;
+    background: $black100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0;
+    transition: ease-in .1s;
+    flex-shrink: 0;
+    z-index: 901;
+
+    &:hover {
+        background: $black80;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .add-button {
+        top: calc(94vh - 63px);
+        position: fixed;
+        right: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .add-button {
+        top: 6px;
+        position: fixed;
+        right: 16px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .add-button {
+        right: 10%;
+    }
+}

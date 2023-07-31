@@ -1,0 +1,79 @@
+@import '../../../../../assets/styles/variables';
+
+.news-card {
+    margin-top: 20px;
+    position: relative;
+}
+
+.news-card-img {
+    max-width: 100%;
+    border-radius: 32px;
+}
+
+.news-card-chip {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: $black80;
+    background-color: $black05;
+    padding: 8px 12px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.news-card-title {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.img-placeholder {
+    width: 100%;
+    border-radius: 32px;
+    background-color: $black20;
+    height: 25vh;
+    animation: placeholder 2s infinite;
+}
+
+.date-paceholder {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: $black80;
+    background-color: $black05;
+    padding: 8px 12px;
+    border-radius: 25px;
+    display: inline-block;
+    width: 30%;
+    color: transparent;
+    animation: placeholder 2s infinite;
+}
+
+.text-placeholder {
+    position: relative;
+    span {
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 20.8px;
+        color: $black80;
+        background-color: $black10;
+        padding: 8px 12px;
+        border-radius: 25px;
+        display: inline-block;
+        width: 100%;
+        color: transparent;
+        box-sizing: border-box;
+        animation: placeholder 1s infinite;
+    }
+}
+
+@keyframes placeholder {
+    from {
+        background:  rgba(202,202,202,1) 100%;
+    }
+    50% {
+        background: rgba(160,160,160,1) 100%;
+    }
+    to {
+        background:  rgba(202,202,202,1) 100%;
+    }
+}
